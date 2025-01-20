@@ -1,0 +1,40 @@
+/* public/css/styles.css */  
+
+/* General Body Styles */  
+body {  
+    background-color: #f4f4f4; /* Light gray background */  
+    font-family: 'Arial', sans-serif; /* Font style for the body */  
+    color: #333; /* Dark gray text color */  
+    line-height: 1.6; /* Space between lines */  
+    margin: 0; /* Remove default margins */  
+    padding: 0; /* Remove default padding */  
+}  
+
+/* Title Styles */  
+.custom-title {  
+    cursor: pointer;
+    font-size: 48px; /* Large font size */  
+    color: #2c3e50; /* Dark blue color */  
+    text-align: center; /* Center aligned text */  
+    margin-top: 50px; /* Space above the title */  
+    margin-bottom: 20px; /* Space below the title */  
+    text-transform: uppercase; /* Uppercase letters */  
+    letter-spacing: 2px; /* Space between letters */  
+    transition: all 0.4s ease; /* Smooth transition */  
+}  
+
+/* Title Hover Effect */  
+.custom-title:hover {  
+    color: #1abc9c; /* Change color on hover */  
+    transform: scale(1.05); /* Slightly enlarge on hover */  
+}  
+
+/* Additional Decoration (Optional) */  
+.custom-title::before {  
+    content: ''; /* Empty content for pseudo-element */  
+    display: block; /* Block display for the line */  
+    width: 70px; /* Width of the line */  
+    height: 4px; /* Height of the line */  
+    background-color: #e74c3c; /* Red line color */  
+    margin: 0 auto 20px; /* Center it with margin below */  
+}
