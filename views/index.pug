@@ -1,4 +1,14 @@
 extends ./layouts/master
 
 block content  
-  h1.custom-title= title  
+   .container  
+      h1.text-center Chat Room  
+      .chat-container.bg-light.border.p-2  
+        .messages  
+          .message.text-left.mt-2 
+          .message.text-right.mt-2
+          .message.text-left  
+      .input-group.mb-3  
+        input#messageInput(type="text" class="form-control mt-2" placeholder="Type your message..." aria-label="Message" aria-describedby="button-addon2")  
+        div.input-group-append  
+          button#sendMessage(type="button" class="btn btn-primary mt-2") Send  

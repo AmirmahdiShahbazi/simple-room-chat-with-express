@@ -1,9 +1,9 @@
 const express = require('express');
 const adminController = require('../controllers/home')
 const router = express.Router();
-const playGroundMiddleware = require('../middlewares/playground');
+const authMiddleware = require('../middlewares/auth');
 
-router.get('/', playGroundMiddleware, adminController.homePage);
+router.get('/',authMiddleware, adminController.homePage);
 
 
 
