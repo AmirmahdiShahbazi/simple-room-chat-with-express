@@ -4,11 +4,19 @@ block content
    .container  
       h1.text-center Chat Room  
       .chat-container.bg-light.border.p-2  
-        .messages  
-          .message.text-left.mt-2 
-          .message.text-right.mt-2
-          .message.text-left  
+        .messages
+          h3.text-center Enter your message
+          each val, key in chats  
+            if val.user._id == user_id  
+              .message.text-right.mt-2
+                strong You:   
+                | #{val.message}
+            else
+              .message.text-left.mt-2  
+                strong= val.user.username  
+                | : #{val.message}
       .input-group.mb-3  
         input#messageInput(type="text" class="form-control mt-2" placeholder="Type your message..." aria-label="Message" aria-describedby="button-addon2")  
+        input#user_id(type="hidden" value=user_id)
         div.input-group-append  
           button#sendMessage(type="button" class="btn btn-primary mt-2") Send  

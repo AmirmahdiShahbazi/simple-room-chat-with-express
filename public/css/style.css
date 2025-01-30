@@ -38,3 +38,10 @@ body {
     background-color: #e74c3c; /* Red line color */  
     margin: 0 auto 20px; /* Center it with margin below */  
 }
+
+.chat-container {
+    height: 100%;
+    max-height: 70%;
+    overflow: auto;
+    background: ivory;
+}
